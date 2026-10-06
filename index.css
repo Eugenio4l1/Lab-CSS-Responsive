@@ -15,12 +15,14 @@ h2 { margin: 1rem 0 0.5rem; }
     "e e";
 }
 
-.grid .bar {
-  grid-area: bar;
-  background: #bbb;
-  min-height: 40px;
-  padding: 0.5rem 1rem;
-}
+.grid > * { border: 2px solid #999; padding: 1rem; min-height: 80px; }
+
+.grid .bar { grid-area: bar; background: #bbb; min-height: 40px; }
+.grid .a { grid-area: a; display: none; }
+.grid .b { grid-area: b; min-height: 200px; }
+.grid .c { grid-area: c; }
+.grid .d { grid-area: d; }
+.grid .e { grid-area: e; }
 
 @media (min-width: 768px) {
   .grid {
