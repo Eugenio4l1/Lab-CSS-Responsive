@@ -3,36 +3,37 @@
 body { padding: 1rem; font-family: Arial, sans-serif; }
 h2 { margin: 1rem 0 0.5rem; }
 
-/* ========== EJERCICIO 1 ========== */
+/* Ejercicio 1 */
 .grid {
   display: grid;
   gap: 8px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
+    "bar bar"
     "b b"
     "c d"
     "e e";
 }
 
-.grid > * { border: 2px solid #999; padding: 1rem; min-height: 80px; }
-
-.grid .a { grid-area: a; display: none; }
-.grid .b { grid-area: b; min-height: 200px; }
-.grid .c { grid-area: c; }
-.grid .d { grid-area: d; }
-.grid .e { grid-area: e; }
+.grid .bar {
+  grid-area: bar;
+  background: #bbb;
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+}
 
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
+      "bar bar bar"
       "a b b"
       "c d e";
   }
   .grid .a { display: block; }
 }
 
-/* ========== EJERCICIO 2 ========== */
+/* Ejercicio 2 */
 .layout {
   display: grid;
   gap: 8px;
